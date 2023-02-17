@@ -43,7 +43,7 @@ func main() {
 		allObject.RAM = ramObject.Max
 		allObject.Upload = trafficObject.Upload
 		allObject.Download = trafficObject.Download
-		allObject.Uptime = uptimeObject.Last_entry
+		allObject.Uptime = uptimeObject.Max
 
 		res := helper.BuildResponse(true, "Data response", allObject)
 		context.JSON(200, res)

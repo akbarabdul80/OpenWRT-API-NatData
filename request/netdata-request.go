@@ -2,10 +2,7 @@ package request_utlis
 
 import (
 	"encoding/json"
-	"log"
-	"os"
 
-	"github.com/joho/godotenv"
 	"github.com/zerodev/oled_api_zerodev/dto"
 	"github.com/zerodev/oled_api_zerodev/helper"
 )
@@ -13,12 +10,7 @@ import (
 var serverUrl string
 
 func init() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
-	serverUrl = os.Getenv("API_SERVER")
+	serverUrl = "http://127.0.0.1:19999/api/v1/"
 }
 
 func GetUptime() (dto.ResponseUptime, error) {
